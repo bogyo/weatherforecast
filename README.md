@@ -7,6 +7,10 @@ weatherforecast web application, using React.js. All weather information coming 
 - npm install
 - runnig on port 3000
 
+build:
+- npm run build
+- running on port 9000
+
 #usage
 
 - type a city name to the field and press enter
@@ -25,4 +29,3 @@ weatherforecast web application, using React.js. All weather information coming 
 - handling errors - /not city name typed in, API errors/
 - default location definition based on geolocation
 - autosuggest dropdown from cities, which are avaliable on the API
-
