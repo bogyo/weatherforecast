@@ -27,5 +27,5 @@ build:
 # possible future development plan
 
 - handling errors - /not city name typed in, API errors/
-- default location definition based on geolocation
+- default location definition based on geolocation (now it is only a sample Budapest value)
 - autosuggest dropdown from cities, which are avaliable on the API
