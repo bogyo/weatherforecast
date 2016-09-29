@@ -4,8 +4,8 @@ weatherforecast web application, using React.js. All weather information coming 
 
 # install
 
-npm install
-runnig on port 3000
+- npm install
+- runnig on port 3000
 
 #usage
 
@@ -17,7 +17,7 @@ runnig on port 3000
 - default state: weather information for today
 - change to forecast state choose forecast from dropdown
 
-- today state: avarage temprature, weather icon, and humidity information for right now and the next view hours 
+- today state: avarage temprature, weather icon, and humidity information for right now and the next view hours
 - forecast state: the minimum/maximum tempreatures for the next few days, what I counted from incoming data
 
 # possible future development plan
