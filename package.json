@@ -1,21 +1,36 @@
 {
   "name": "weather",
   "version": "0.1.0",
+  "description": "weather forecast app using React.js",
+  "author": "bogyo | Katinka Orosz",
   "private": true,
   "devDependencies": {
+    "enzyme": "^2.4.1",
+    "react-addons-test-utils": "^15.3.2",
     "react-scripts": "0.6.0"
   },
   "dependencies": {
     "axios": "^0.14.0",
     "bootstrap": "^3.3.7",
     "react": "^15.3.2",
-    "react-autosuggest": "^6.0.4",
-    "react-dom": "^15.3.2"
+    "react-dom": "^15.3.2",
+
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bogyo/weatherforecast"
+  },
+  "license": "MIT"
 }
