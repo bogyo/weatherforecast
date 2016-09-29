@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
 export default class WeatherTableForecast extends Component {
-  
+
   render () {
     var forecast = this.props.weatherForecast;
-    console.log(forecast);
+
     return (
       <table className="weather-table">
         <thead>
@@ -12,8 +12,8 @@ export default class WeatherTableForecast extends Component {
           <td>day</td>
           <td>icon min</td>
           <td>icon max</td>
-          <td>min temperature<br />F</td>
-          <td>max temperature<br />F</td>
+          <td>min temperature<br />C</td>
+          <td>max temperature<br />C</td>
         </tr>
         </thead>
         <tbody>

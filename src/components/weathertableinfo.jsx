@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 export default class WeatherTableInfo extends Component {
-  
+
   renderWeather (item) {
     return <tr key={item.key}>
       <td>{item.time}</td>
@@ -10,24 +10,24 @@ export default class WeatherTableInfo extends Component {
       <td>{item.humidity}</td>
     </tr>;
   }
-  
+
   render () {
     var now = this.props.weatherInfoNow,
       today = this.props.weatherInfoToday;
-    
+
     return <div>
       <table className="weather-table">
         <thead>
         <tr>
           <td>time</td>
           <td>icon</td>
-          <td>temperature<br />F</td>
+          <td>temperature<br />C</td>
           <td>humidity<br />%</td>
         </tr>
         </thead>
         <tbody>
         {now.map(this.renderWeather)}
-        
+
         {today.map(this.renderWeather)}</tbody>
       </table>
     </div>;

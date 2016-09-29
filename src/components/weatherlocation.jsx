@@ -7,29 +7,29 @@ export default class WeatherLocation extends Component {
       location: this.props.selectedLocation
     };
   }
-  
+
   setLocation = (event) => {
     this.setState({location: event.target.value});
   }
-  
+
   handleKeyPress = (event) => {
     if ( event.charCode === 13 ) {
       this.getWeather();
     }
   }
-  
+
   handleFocus = (event) => {
     if ( this.state.location == event.target.value ) {
       this.setState({location: ''});
     }
   }
-  
+
   getWeather = () => {
     if ( this.state.location ) {
       this.props.onChange(this.state.location);
     }
   }
-  
+
   render () {
     return (
       <div className="weather-location-input">

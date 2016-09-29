@@ -22,6 +22,13 @@ describe('WeatherLocation', () => {
 
   });
 
-  //todo click or autosugg?
+  it('should clear the input field on focus', () => {
+
+    WeatherLocationInstance.find('input').simulate('change', {target: {value: " "}});
+    WeatherLocationInstance.find('input').simulate('focus', {target: {value: " "}});
+
+    expect(WeatherLocationInstance.state('location')).toEqual('');
+
+  });
 
 });

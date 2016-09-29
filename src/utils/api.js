@@ -3,7 +3,7 @@ var api = {
   forecastUrl: "forecast/?q=",
   currentWeatherUrl: "weather?q=",
   key: '5a7ad2191f4fb336f438059f2c32cf88',
-  addAppid: '&appid=',
+  addAppid: '&units=metric&appid=',
   iconUrl: 'http://openweathermap.org/img/w/',
   getForecastUrl: function () {
     return this.baseUrl + this.forecastUrl;

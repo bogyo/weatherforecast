@@ -92,7 +92,7 @@ var sorter = {
 
   filterDisplayValuesFromForecast: function (forecast) {
     var days = this.groupForecastItemsByDays(forecast),
-      displayMaxDataOfDay = [], displayMinDataOfDay = [], displayData = [];
+      displayMaxDataOfDay = [], displayMinDataOfDay = [], displayData = [], finalData;
 
     //go trough on every day, choose the max
 
@@ -115,7 +115,7 @@ var sorter = {
     // give back a list with days
     // each day should have two obj min and max, with transformed Icon and dt_txt
 
-    var displayData = Object.keys(displayMaxDataOfDay).map(function (day) {
+    var finalData = Object.keys(displayMaxDataOfDay).map(function (day) {
       displayData[ day ] = {};
       displayData[ day ][ 'max' ] = displayMaxDataOfDay[ day ];
       displayData[ day ].max.icon = this.transformIconData(displayData[ day ].max.weather[ 0 ].icon);
@@ -126,7 +126,7 @@ var sorter = {
       return displayData[ day ];
     }, this);
 
-    return displayData;
+    return finalData;
   }
 }
 
