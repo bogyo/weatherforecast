@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import WeatherTime from '../components/weathertime';
+import WeatherTime from '../components/weathertime.jsx';
 
 describe('WeatherTime', () => {
 
@@ -25,7 +25,7 @@ describe('WeatherTime', () => {
   });
 
   it('should change the time state BACK with given value', () => {
-    
+
     expect(WeatherTimeInstance.state('time')).toEqual('Forecast');
 
     WeatherTimeInstance.find('select').simulate('change', {target: {value: "Today"}});

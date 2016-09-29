@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import WeatherTableInfo from '../components/weathertableinfo';
+import WeatherTableInfo from '../components/weathertableinfo.jsx';
 
 describe('WeatherTableInfo', () => {
   const now = [{key: 1, time:'now', icon: 'sun.png', temp: '28', humidity: '34' }];
@@ -32,5 +32,5 @@ describe('WeatherTableInfo', () => {
     expect(WeatherTableInfoInstance.contains( <td>lastItem</td> )).toEqual(true);
 
   });
-  
+
 });

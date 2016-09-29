@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import WeatherTableForecast from '../components/weathertableforecast';
+import WeatherTableForecast from '../components/weathertableforecast.jsx';
 
 describe('WeatherTableForecast', () => {
   /*  const forecast = [{"max": {
@@ -37,14 +37,14 @@ describe('WeatherTableForecast', () => {
     //    const WeatherTableForecastInstance = shallow(
     //         <WeatherTableForecast weatherForecast={forecast} />
     //       );
-    
+
     //  expect(WeatherTableForecastInstance.contains( <td>2016-09-29</td> )).toEqual(true);
     //  expect(WeatherTableForecastInstance.contains( <td><img src="sun.png" alt="icon"/><img src="cloud.png" alt="icon"/></td> )).toEqual(true);
     //expect(WeatherTableInfoInstance.contains( <td>286.567not_to_display</td> )).toEqual(true);
     //  expect(WeatherTableInfoInstance.contains( <td>285.83</td> )).toEqual(true);
-    
+
     //expect(WeatherTableInfoInstance.contains( <td>286.567not_to_display</td> )).toEqual(false);
-    
+
   });
-  
+
 });
