@@ -5,11 +5,15 @@ weatherforecast web application, using React.js. All weather information coming 
 # install
 
 - npm install
+- npm start
 - runnig on port 3000
 
 build:
 - npm run build
 - running on port 9000
+
+test:
+- npm test
 
 #usage
 
