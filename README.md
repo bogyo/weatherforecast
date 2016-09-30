@@ -13,7 +13,7 @@ build:
 
 #usage
 
-- type a city name to the field and press enter
+- type a city name to the field and press enter or click on get weather button
 
 #features
 

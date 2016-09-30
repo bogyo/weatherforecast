@@ -30,6 +30,10 @@ body {
   text-align: center;
 }
 
+.weather-location-input {
+  position: relative;
+}
+
 .weather-location-input > *,
 .weather-time-input select {
   width: 100%;
@@ -51,6 +55,20 @@ body {
   cursor: pointer;
 }
 
+.weather-cta {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20));
+  cursor: pointer;
+  border: solid 1px #da7c0c;
+}
+
+.weather-cta:active {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f47a20), to(#faa51a));
+}
 
 .weather-table {
   table-layout: fixed;

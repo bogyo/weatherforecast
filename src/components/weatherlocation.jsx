@@ -35,6 +35,7 @@ export default class WeatherLocation extends Component {
       <div className="weather-location-input">
         <input type="text" value={this.state.location} onChange={this.setLocation} onKeyPress={this.handleKeyPress}
                onFocus={ this.handleFocus }/>
+        <button className="weather-cta" onClick={this.getWeather}>Get Weather</button>
       </div>
     )
   }
