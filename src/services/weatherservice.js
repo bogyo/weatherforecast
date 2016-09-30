@@ -4,12 +4,12 @@ import axios from 'axios';
 
 var service = {
   getCurrentWeather: function (location) {
-    return new Promise(function (resolve, reject) {
+    return new Promise((resolve, reject) => {
       axios
         .get(api.getCurrentWeatherUrl() + location + api.getApiKey())
-        .then(function (result) {
+        .then( result => {
           var weather = []; // choose the necessary datas and push it to an array.
-          
+
           weather.push(
             {
               key: result.data.id,
@@ -18,18 +18,18 @@ var service = {
               temp: result.data.main.temp,
               humidity: result.data.main.humidity
             });
-          
+
           resolve(weather); // give back necessary weather data to the calling component
         });                 // TODO: handle possible errors, handle reject
     });
   },
-  
+
   getForecast: function (location) {
-    return new Promise(function (resolve, reject) {
+    return new Promise( (resolve, reject) => {
       axios
         .get(api.getForecastUrl() + location + api.getApiKey())
-        .then(function (result) {
-          
+        .then( result => {
+
           resolve(result.data.list); // TODO: handle possible errors, handle reject
         });
     })

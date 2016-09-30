@@ -5,7 +5,6 @@ import api from '../utils/api.js';
 // TODO: it became to long, consider separation - tree different file
 // separation concept: general, today and forecast related functions
 
-
 var sorter = {
 
   /***
@@ -29,15 +28,15 @@ var sorter = {
    *** CURRENT WEATHER RELATED DATA TRANSFORMATIONS
    ***/
 
-  getTodayForecast: function (list, today) {
-    var today = this.sortTodayItems(list, today),
+  getTodayForecast: function (list, todayTest) {
+    var today = this.sortTodayItems(list, todayTest),
       todayData = this.filterDisplayValuesFromToday(today);
     // Do we need all of this? Sometimes the API give back only future items,
     // sometimes data from the LAST few hour as well (?why), TODO: handle this error, sort only future items
     return todayData;
   },
-  sortTodayItems: function (list, today) { // sort list items only for today
-    var today = today || new Date().toJSON().slice(0, 10);
+  sortTodayItems: function (list, todayTest) { // sort list items only for today
+    var today = todayTest || new Date().toJSON().slice(0, 10);
 
     return list.filter(elem => {
       return elem.dt_txt.includes(today);
@@ -66,8 +65,8 @@ var sorter = {
     return this.filterDisplayValuesFromForecast(forecast);
   },
 
-  sortForcastItems: function (list, today) {
-    var today = today || new Date().toJSON().slice(0, 10);
+  sortForcastItems: function (list, todayTest) {
+    var today = todayTest || new Date().toJSON().slice(0, 10);
 
     return list.filter(elem => {
       return !elem.dt_txt.includes(today);
@@ -115,7 +114,7 @@ var sorter = {
     // give back a list with days
     // each day should have two obj min and max, with transformed Icon and dt_txt
 
-    var finalData = Object.keys(displayMaxDataOfDay).map(function (day) {
+    finalData = Object.keys(displayMaxDataOfDay).map(function (day) {
       displayData[ day ] = {};
       displayData[ day ][ 'max' ] = displayMaxDataOfDay[ day ];
       displayData[ day ].max.icon = this.transformIconData(displayData[ day ].max.weather[ 0 ].icon);

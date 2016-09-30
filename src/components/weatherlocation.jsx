@@ -19,7 +19,7 @@ export default class WeatherLocation extends Component {
   }
 
   handleFocus = (event) => {
-    if ( this.state.location == event.target.value ) {
+    if ( this.state.location === event.target.value ) {
       this.setState({location: ''});
     }
   }
