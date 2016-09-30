@@ -47,13 +47,13 @@ describe('Sorter', () => {
   });
 
   it('should return with the final weather data for today forecast', () => {
-    var filtered = sorter.getTodayForecast(sample.sampleList);
+    var filtered = sorter.getTodayForecast(sample.sampleList, '2016-09-29');
 
     expect(filtered).toEqual(dataToDisplayToday);
   });
 
   it('should return with weather data for the nex few days NOT today', () => {
-    var forecast = sorter.sortForcastItems(sample.sampleList);
+    var forecast = sorter.sortForcastItems(sample.sampleList, '2016-09-29');
 
     expect(forecast).toEqual(sample.forecastList);
   });
@@ -61,7 +61,7 @@ describe('Sorter', () => {
   it('should return with weather data group by days', () => {
     var groupedData = sorter.groupForecastItemsByDays(sample.forecastList);
 
-  //  expect(groupedData).toEqual(sample.forcastGroupedByDay);
+   expect(groupedData).toEqual(sample.forcastGroupedByDay);
   });
 
 });

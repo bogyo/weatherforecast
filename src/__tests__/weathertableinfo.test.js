@@ -8,7 +8,7 @@ describe('WeatherTableInfo', () => {
       {key: 2, time:'15:00', icon: 'cloud.png', temp: '27', humidity: 'lastItem' }];
 
   it('should set the values for weather NOW', () => {
-    const WeatherTableInfoInstance = shallow(
+    const WeatherTableInfoInstance = shallow (
          <WeatherTableInfo weatherInfoNow={now} weatherInfoToday={today}/>
        );
 

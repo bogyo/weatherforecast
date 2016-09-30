@@ -42,7 +42,7 @@ describe('WeatherTableForecast', () => {
         <WeatherTableForecast weatherForecast = {forecast} />
     );
 
-  expect(WeatherTableForecastInstance.contains(<td>2016-09-29</td >)).toEqual(true);
+  expect(WeatherTableForecastInstance.contains(<td>2016-09-29</td>)).toEqual(true);
 
   });
 });

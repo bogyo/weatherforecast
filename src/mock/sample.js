@@ -10,7 +10,7 @@ var sample = {
       temp: 288.13,
       humidity: 75
     } ],
-  
+
   todayList: [
     {
       "dt": 1475128800,
@@ -191,7 +191,7 @@ var sample = {
       "dt_txt": "2016-10-02 21:00:00"
     }
   ],
-  
+
   forecastList: [
     {
       "dt": 1475118000,
@@ -446,7 +446,7 @@ var sample = {
       }
     ]
   },
-  
+
   minmaxForecast: {
     "2016-09-30": {
       max: {

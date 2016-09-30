@@ -29,8 +29,8 @@ var sorter = {
    *** CURRENT WEATHER RELATED DATA TRANSFORMATIONS
    ***/
 
-  getTodayForecast: function (list) {
-    var today = this.sortTodayItems(list),
+  getTodayForecast: function (list, today) {
+    var today = this.sortTodayItems(list, today),
       todayData = this.filterDisplayValuesFromToday(today);
     // Do we need all of this? Sometimes the API give back only future items,
     // sometimes data from the LAST few hour as well (?why), TODO: handle this error, sort only future items
@@ -66,8 +66,8 @@ var sorter = {
     return this.filterDisplayValuesFromForecast(forecast);
   },
 
-  sortForcastItems: function (list) {
-    var today = new Date().toJSON().slice(0, 10);
+  sortForcastItems: function (list, today) {
+    var today = today || new Date().toJSON().slice(0, 10);
 
     return list.filter(elem => {
       return !elem.dt_txt.includes(today);
