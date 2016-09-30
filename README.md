@@ -33,3 +33,4 @@ test:
 - handling errors - /not city name typed in, API errors/
 - default location definition based on geolocation (now it is only a sample Budapest value)
 - autosuggest dropdown from cities, which are avaliable on the API
+- using Redux instead of services
